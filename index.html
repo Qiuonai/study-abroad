@@ -142,15 +142,18 @@
             <p class="mb-10 text-blue-100">Contact us today for a free profile assessment and start your journey abroad.</p>
             <div class="bg-white p-8 rounded-3xl max-w-xl mx-auto text-slate-900 shadow-2xl">
                 <h3 class="font-bold text-xl mb-6">Request a Callback</h3>
-                <form class="space-y-4">
-                    <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-                    <input type="email" placeholder="Email Address" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-                    <select class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none bg-white">
-                        <option>Interested in DET</option>
-                        <option>Interested in IELTS</option>
-                        <option>Admissions Help</option>
+                <!-- FORM UPDATE: ACTION URL ADDED, NAMES ADDED TO INPUTS -->
+                <form action="https://formspree.io/f/mkoykppz" method="POST" class="space-y-4">
+                    <input type="text" name="name" required placeholder="Your Name" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                    <input type="email" name="email" required placeholder="Email Address" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                    <select name="interest" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none bg-white">
+                        <option value="DET">Interested in DET</option>
+                        <option value="IELTS">Interested in IELTS</option>
+                        <option value="Admissions">Admissions Help</option>
                     </select>
-                    <button type="button" class="w-full bg-blue-700 text-white font-bold py-4 rounded-xl hover:bg-blue-800 transition">Get Started</button>
+                    <!-- HONEYPOT FIELD TO PREVENT SPAM -->
+                    <input type="text" name="_gotcha" style="display:none" />
+                    <button type="submit" class="w-full bg-blue-700 text-white font-bold py-4 rounded-xl hover:bg-blue-800 transition">Get Started</button>
                 </form>
             </div>
         </div>
