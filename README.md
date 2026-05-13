@@ -1,5 +1,5 @@
 # Stellar Study Abroad Landing Page
 
-A modern landing page built with Tailwind CSS.
+The  landing page of the Stellar Study Abroad built with Tailwind CSS.
 
 ## 
